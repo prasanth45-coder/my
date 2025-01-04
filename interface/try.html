@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            background: repeating-linear-gradient(#5A1A32, #A8A8AA);
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container Styling */
+        .container {
+            width: 400px;
+            background: #fff;
+            border-radius: 1cqmax 5rem 0px 5rem;
+            box-shadow: #fff;
+        
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Logo Section */
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 250px;
+            transform: scale(1.5);
+            border-radius: 50%;
+            border-color:linear-gradient(#2929b5,#5A1A32);
+            mix-blend-mode:exclusion
+            ;
+            margin-right: 10%;
+        }
+        
+        .account-signup label{
+    
+            background-color: rgb(28, 30, 30);
+            color: white;
+            align-items: center;
+            display:inline;
+            padding: 1.5px;
+            border-radius: 5px;
+        
+        }
+
+
+       
+
+        /* Hide radio buttons */
+        input[type="radio"] {
+            display: none;
+        }
+
+        /* Form Styling */
+        .form-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Display active form when radio is checked */
+        input#login-tab:checked ~ .form-container.login,
+        input#signup-tab:checked ~ .form-container.signup {
+            display: flex;
+        }
+
+        .form-container h2 {
+            margin-bottom: 5px;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: darkslategray;
+            font-family: fantasy;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background: #A8A8AA;
+            color: grey;
+        }
+
+        /* Forgot Password Link */
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .forgot-password a {
+            color: #5A1A32;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        .legend{
+            font-size: 32px;
+             font-weight: bold; 
+             color: transparent; -webkit-text-stroke: 2px #333;
+        }
+        /*account signup*/
+        button[type="signup"]{
+        background-color:#22041b ;
+        color: white;
+        font-weight: 100;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        padding: 5px;
+        border-radius: 100px;
+        cursor: pointer;
+
+        }
+        button[type="signup"]:hover{
+            background-color: grey;
+            cursor: pointer;
+
+        }
+
+        .h5{
+            margin-top: 20px;
+        }
+        .h5-2{
+            margin-top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="./images/1a.png" alt="Logo">
+            <!-- <img src="images/font.logo.png" alt="Logo"> -->
+            
+            
+
+        </div>
+
+        
+        
+
+        <!-- Login Form -->
+        <input type="radio" id="login-tab" name="tab" checked>
+        <input type="radio" id="signup-tab" name="tab">
+        <!-- Login Form -->
+<div class="form-container login">
+    <h2 style="font-size: 42px;font-family: cursive; font-weight:bolder; color: transparent; color:#5A1A32;">Welcome</h2>
+    <form action="/html/musicity project/TEAM E/index.html" method="get">
+        <div class="form-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit">Sign in</button>
+    </form>
+    <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+    </div>
+    <div class="account-signup">
+        <h5 class="h5">Don't have an account? <label for="signup-tab">Sign up</label></h5>
+    
+        </div>
+    
+
+</div>
+
+<!-- Signup Form -->
+<div class="form-container signup">
+    <h2 style="font-size: 32px; font-weight: bold; color: transparent;color: #5A1A32 ;">Join Us</h2>
+    <form action="index.html" method="get">
+        <div class="form-group">
+            <label for="signup-name">Name</label>
+            <input type="text" id="signup-name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input type="password" id="signup-password" name="password" placeholder="Create a password" required>
+        </div>
+        <button type="submit">Signup</button>
+    </form>
+    
+        
+    <div class="account-signup">
+        <h5 class="h5-2">Already have an account?  <label for="login-tab">Sign in</label></h5>
+    
+    
+        </div>
+
+       
+</div>
+
+
+       
+    
+</body>
+</html>
