@@ -355,7 +355,12 @@
         if(localStorage.getItem('userLogged') === 'true'){
             
             document.querySelector('.preview').style.display = 'none';
+            localStorage.removeItem('userLogged');
+        }else {
+        document.querySelector('.preview').style.display = 'block';
+        footer.style.display = 'none';
         }
+        console.log(localStorage.getItem('userLogged'));
     </script>
 </body>
 

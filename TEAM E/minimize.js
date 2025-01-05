@@ -13,9 +13,8 @@ window.addEventListener('load', () => {
             audioUrl: songs[songIndex].path,
         };
         localStorage.setItem('currentSong', JSON.stringify(currentSong));
-
-        console.log(currentSong.title);
-
+        localStorage.setItem('userLogged','true');
         window.location.href = 'http://127.0.0.1:5500/my/interface/index.html';
+
     });
 });

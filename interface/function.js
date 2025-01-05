@@ -45,6 +45,13 @@ window.onload = () => {
             audioElement.currentTime = currentSong.currentTime;
         }
 
+        audioElement.play().catch((error) => {
+            console.error("Autoplay failed:", error);
+        });
+
+        const playPauseButton = document.getElementById('play_pause');
+        playPauseButton.classList.replace('fa-circle-play', 'fa-circle-pause');
+
         // Play/Pause button functionality
         document.getElementById('play_pause').addEventListener('click', () => {
             if (audioElement.paused) {
@@ -67,6 +74,8 @@ window.onload = () => {
             }));
             document.querySelector('#current-time').textContent = formattedTime;
         });
+
+        
 
         // Remove the current song from local storage after it's loaded
         localStorage.removeItem('currentSong');
