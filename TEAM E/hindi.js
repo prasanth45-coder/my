@@ -283,12 +283,3 @@ function createMusicSymbol() {
 
 // Generate music symbols at intervals
 setInterval(createMusicSymbol, 500);
-
-document.addEventListener('DOMContentLoaded', function() {
-    const minimizeBtn = document.getElementById('minimize');
-    const playerContainer = document.querySelector('.player');
-
-    minimizeBtn.addEventListener('click', function() {
-        playerContainer.classList.toggle('minimized');
-    });
-});

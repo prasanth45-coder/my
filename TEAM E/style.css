@@ -310,16 +310,40 @@ h1:hover {
 
 
 .minimized {
-    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px; /* Adjust the height for minimized state */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8); /* Optional: shrink player */
+    z-index: 9999;
 }
 
 .minimize-btn {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
+    top: 10px;
+    right: 10px;
+    background-color: #1e1e1e;
+    color: white;
     border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.minimize-btn:hover {
+    background-color: #333;
+}
+@keyframes minimize-wanimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
 }

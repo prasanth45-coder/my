@@ -307,10 +307,9 @@
 
             <hr>
         </div>
-
     </div>
 
-    <div class="preview">
+    <div class="preview ">
         <div class="text">
             <h6>Preview of Music City</h6>
             <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
@@ -321,26 +320,42 @@
             </a>
         </div>
     </div>
-    <div class="music-player">
-        <div class="thumbnail"></div>
-        <div class="song-info">
-            <h4 class="title">Song Title</h4>
-            <p class="artist">Artist Name</p>
+    <footer id="footer">
+        <div class="minimized_music_player">
+            <div class="left">
+                <div class="thumbnail"><img src="./images/02.jpeg" alt=""></div>
+                <div class="song-info">
+                    <h4 class="title"></h4>
+                    <p class="artist"></p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="controls">
+                    <i class="fa-solid fa-backward fa-xl" id="previous"></i>
+                    <i class="fa-solid fa-circle-play fa-2xl" id="play_pause"></i>
+                    <i class="fa-solid fa-forward fa-xl" id="next"></i>
+                </div>
+                <audio id="audio" preload="auto" hidden>
+                    <source id="audio-source" src="" type="audio/mp3">
+                </audio>
+                <input type="range" id="prg" value="0" step="1" min="0" max="100">
+                <div class="time-info">
+                    <span id="current-time"></span><span id="total-duration"></span>
+                </div>
+            </div>
         </div>
-        <div class="controls">
-            <button id="previous" class="fa fas fa-backward"></button>
-            <button id="play-pause" class="fa fas fa-play"></button>
-            <button id="next" class="fa fas fa-forward"></button>
-        </div>
-        <input type="range" id="prg" value="0" step="1" min="0" max="100">
-        <div class="time-info">
-            <span id="current-time">00:00</span> / <span id="total-duration">00:00</span>
-        </div>
-    </div>
+    </footer>
     
-
-    <script src="https://kit.fontawesome.com/ef9a692198.js" crossorigin="anonymous">
-        
+    <script src="https://kit.fontawesome.com/ef9a692198.js" crossorigin="anonymous">    
+    </script>
+    
+    <script src='https://kit.fontawesome.com/8e5e768940.js' crossorigin='anonymous'></script>
+    <script src="./function.js"></script>
+    <script>
+        if(localStorage.getItem('userLogged') === 'true'){
+            
+            document.querySelector('.preview').style.display = 'none';
+        }
     </script>
 </body>
 
