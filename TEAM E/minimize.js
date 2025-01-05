@@ -9,7 +9,8 @@ window.addEventListener('load', () => {
             title: songs[songIndex].title,
             artist: songs[songIndex].artist,
             currentTime: audio.currentTime,
-            duration: audio.duration
+            duration: audio.duration,
+            audioUrl: songs[songIndex].path,
         };
         localStorage.setItem('currentSong', JSON.stringify(currentSong));
 
